@@ -1,4 +1,4 @@
-import worknet_api
+import scrapper.worknet_api as worknet_api
 
 def main():
     pass
