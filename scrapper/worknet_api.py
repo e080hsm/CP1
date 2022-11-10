@@ -94,6 +94,10 @@ class worknet_scrapper:
         return None if inplace else self
 
     def move_to_nosql(self, collection:MongoClient):
+        '''
+        scrap_api_detail에서 받아온 리스트를 MongoDB에 저장한다.
+        collection: 데이터를 저장할 MongoClient.
+        '''
         DATABASE_NAME = 'cp1'
         COLLECTION_NAME = 'worknet'
         collection[DATABASE_NAME][COLLECTION_NAME].insert_many(self.api_detail)
